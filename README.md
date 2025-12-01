@@ -1,5 +1,5 @@
 Hello! This is my first repository, welcome. I am pretty new to programming.
-I don't know any languages and my practical experience coding is almost nothing.
+I don't know any languages and my practical experience coding is almost zero.
 But I have always been interested in programming, software engineering, and the
 inner workings of computers, and as such I have recently begun learning C.
 
