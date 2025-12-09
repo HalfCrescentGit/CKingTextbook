@@ -4,9 +4,9 @@ int main() {
     char ch;
 
     printf("Enter a phone number: ");
-    ch = getchar();
 
-    while (ch != '\n') {
+    do {
+        ch = getchar();
         switch (ch) {
             case 'A': case 'B': case 'C': putchar('2'); break;
             case 'D': case 'E': case 'F': putchar('3'); break;
@@ -18,8 +18,7 @@ int main() {
             case 'W': case 'X': case 'Y': putchar('9'); break;
             default: putchar(ch);
         }
-        ch = getchar();
-    }
-    
+    } while (ch != '\n');
+
     return 0;
 }
