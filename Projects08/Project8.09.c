@@ -18,13 +18,9 @@ int main() {
         for (j = 0; j < COLS; j++)
             board[i][j] = '.';
 
-    board[0][0] = ch;
-    for (i = 0; i < ROWS; i++) {
-        for (j = 0; j < COLS; j++)
-            if (board[i][j] == 'A')
-                break;
-        break;
-    }
+    i = 0;
+    j = 0;
+    board[i][j] = ch;
 
     for (; ch < 'Z';) {
         if ((board[i - 1][j] != '.' || i == 0) && (board[i][j + 1] != '.' || j == 9) && 
