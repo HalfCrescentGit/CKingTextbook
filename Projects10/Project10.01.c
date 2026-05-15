@@ -7,19 +7,19 @@
 char contents[STACK_SIZE];
 int top = 0;
 
-void make_empty(void);
-bool is_empty(void);
-bool is_full(void);
+void makeEmpty(void);
+bool isEmpty(void);
+bool isFull(void);
 void push(char i);
 char pop(void);
-void stack_overflow(void);
-void stack_underflow(void);
+void stackOverflow(void);
+void stackUnderflow(void);
 
 int main(void) {
     char ch;
     bool correct;
 
-    make_empty();
+    makeEmpty();
     printf("Enter parentheses and/or braces: ");
 
     do {
@@ -46,39 +46,39 @@ int main(void) {
         printf("Parentheses/braces are not nested properly.");
 }
 
-void make_empty(void) {
+void makeEmpty(void) {
     top = 0;
 }
 
-bool is_empty(void) {
+bool isEmpty(void) {
     return top == 0;
 }
 
-bool is_full(void) {
+bool isFull(void) {
     return top == STACK_SIZE;
 }
 
 void push(char i) {
-    if (is_full()) {
-        stack_overflow();
+    if (isFull()) {
+        stackOverflow();
     }
     else
         contents[top++] = i;
 }
 
 char pop(void) {
-    if (is_empty())
-        stack_underflow();
+    if (isEmpty())
+        stackUnderflow();
     else
         return contents[--top];
 }
 
-void stack_overflow(void) {
+void stackOverflow(void) {
     printf("Stack overflow");
     exit(EXIT_SUCCESS);
 }
 
-void stack_underflow() {
+void stackUnderflow() {
     printf("Parentheses/braces are not nested properly.");
     exit(EXIT_SUCCESS);
 }
