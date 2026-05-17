@@ -78,7 +78,7 @@ void stackOverflow(void) {
     exit(EXIT_SUCCESS);
 }
 
-void stackUnderflow() {
+void stackUnderflow(void) {
     printf("Parentheses/braces are not nested properly.");
     exit(EXIT_SUCCESS);
 }
